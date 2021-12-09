@@ -6,6 +6,6 @@
 <?php
 	if (!empty($_REQUEST['city'])) {
 		$city = $_REQUEST['city'];
-		echo 'Ваш город: '.$city;
+		echo 'Ваш город: '.strip_tags($city);
 	}
 ?>
