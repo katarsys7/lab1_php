@@ -1,7 +1,11 @@
-<form action="" method="get">
-	<input type="text">
-	<input type="submit" value="отправить">
+<form action="" method="GET">
+	<input type="text" name="city">
+	<input type="submit">
 </form>
+
 <?php
-	if isset($_get[text]) echo $_get[text]
+	if (!empty($_REQUEST['city'])) {
+		$city = $_REQUEST['city'];
+		echo 'Ваш город: '.$city;
+	}
 ?>
