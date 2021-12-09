@@ -1,11 +1,8 @@
-<form action="" method="GET">
-	<input type="text" name="city">
-	<input type="submit">
+<form action="/index.php" method="post" enctype="multipart/form-data">
+	<input type="file" name="file-1">
+	<input type="submit" value="Отправить">
 </form>
 
 <?php
-	if (!empty($_REQUEST['city'])) {
-		$city = $_REQUEST['city'];
-		echo 'Ваш город: '.strip_tags($city);
-	}
+print_r($_FILES['file-1']);
 ?>
