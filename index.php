@@ -1,4 +1,4 @@
 <form action="" method="GET">
-	<input type="text" name="user" value="<?php echo $_REQUEST['user']; ?>">
+	<input name="user" value="<?php if(isset($_REQUEST['user'])) echo $_REQUEST['user']; ?>">
 	<input type="submit">
 </form>
