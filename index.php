@@ -4,5 +4,6 @@
 </form>
 
 <?php
-echo $_SERVER;
+  foreach ( $GLOBALS as $key=>$value )
+    echo "\$GLOBALS[\"$key\"] == $value<br>";
 ?>
