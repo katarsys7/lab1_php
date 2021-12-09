@@ -4,6 +4,5 @@
 </form>
 
 <?php
-  foreach ( $GLOBALS as $key=>$value )
-    echo "\$GLOBALS[\"$key\"] == $value<br>";
+echo $_SERVER['HTTP_USER_AGENT']
 ?>
