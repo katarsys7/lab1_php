@@ -1,8 +1,16 @@
-<form action="/index.php" method="post" enctype="multipart/form-data">
-	<input type="file" name="file-1">
-	<input type="submit" value="Отправить">
-</form>
-
 <?php
-echo $_SERVER['HTTP_USER_AGENT']
+if (@$_REQUEST['doGo']) {
+  foreach (@$_REQUEST['known'] as $k=>$v) {
+    if($v) echo "Вы знаете язык программирования $k!<br>";
+    else echo "Вы не знаете языка программирования $k. <br>";
+  }
+}
 ?>
+<form action="<?=$_SERVER['SCRIPT_NAME']?>" method="post">
+Какие языки программирования вы знаете?<br>
+<input type=hidden name="known[PHP]" value="0">
+  <input type=checkbox name="known[PHP]" value="1"> PHP<br>
+<input type=hidden name="known[Perl]" value="0">
+  <input type=checkbox name="known[Perl]" value="1"> Perl<br>
+<input type=submit name="doGo" value="Go!">
+</form>
