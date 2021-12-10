@@ -1,4 +1,4 @@
-<?php
+/*<?php
 if (@$_REQUEST['doGo']) {
   foreach (@$_REQUEST['known'] as $k=>$v) {
     if($v) echo "Вы знаете язык программирования $k!<br>";
@@ -14,3 +14,20 @@ if (@$_REQUEST['doGo']) {
   <input type=checkbox name="known[Perl]" value="1"> Perl<br>
 <input type=submit name="doGo" value="Go!">
 </form>
+*/
+<form action= "<?=$_SERVER['SCRIPT_NAME']?>"  method="post"> 	
+	<p>
+		<select size="3" multiple name="hero[]"> 						 			<option disabled>Выберите героя</option>
+			<option value="Чебурашка">Чебурашка</option>
+			<option selected value="Крокодил Гена">Крокодил Гена</option>
+			<option value="Шапокляк">Шапокляк</option>			
+		</select>
+	</p> 
+	<p>
+		<input type="submit" value="Отправить">
+	</p> 
+</form>
+<?php
+echo '<pre>';
+print_r($_POST);
+?>
