@@ -6,6 +6,8 @@ if (@$_REQUEST['doGo']) {
   }
 }
 ?>
+*/
+<!--
 <form action="<?=$_SERVER['SCRIPT_NAME']?>" method="post">
 Какие языки программирования вы знаете?<br>
 <input type=hidden name="known[PHP]" value="0">
@@ -14,7 +16,11 @@ if (@$_REQUEST['doGo']) {
   <input type=checkbox name="known[Perl]" value="1"> Perl<br>
 <input type=submit name="doGo" value="Go!">
 </form>
-*/
+--></form>
+<?php
+echo '<pre>';
+print_r($_POST);
+?>
 <form action= "<?=$_SERVER['SCRIPT_NAME']?>"  method="post"> 	
 	<p>
 		<select size="3" multiple name="hero[]"> 						 			<option disabled>Выберите героя</option>
@@ -26,8 +32,4 @@ if (@$_REQUEST['doGo']) {
 	<p>
 		<input type="submit" value="Отправить">
 	</p> 
-</form>
-<?php
-echo '<pre>';
-print_r($_POST);
-?>
+
