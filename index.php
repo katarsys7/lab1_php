@@ -23,9 +23,10 @@ print_r($_POST);
 ?>
 <form action= "<?=$_SERVER['SCRIPT_NAME']?>"  method="post"> 	
 	<p>
-		<select size="3" multiple name="hero[]"> 						 			<option disabled>Выберите героя</option>
+		<select name="hero"> 						 			
+			<option >Выберите героя</option>
 			<option value="Чебурашка">Чебурашка</option>
-			<option selected value="Крокодил Гена">Крокодил Гена</option>
+			<option value="Крокодил Гена">Крокодил Гена</option>
 			<option value="Шапокляк">Шапокляк</option>			
 		</select>
 	</p> 
